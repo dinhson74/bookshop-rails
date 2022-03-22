@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
       redirect_to @book
     end
   end
- 
+
   private
 
   def comment_params

@@ -29,6 +29,7 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'roo'
 gem 'omniauth-facebook'
+gem 'pry-rails'
 # gem "mini_magick"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -5,7 +5,7 @@ module Admin
 
     def ensure_admin_user!
       unless current_user&.admin?
-        redirect_to root_path, notice: I18n.t('user.errors.messages.you_are_not_an_admin') 
+        redirect_to root_path, notice: I18n.t('user.errors.messages.you_are_not_an_admin')
       end
     end
   end

@@ -4,8 +4,9 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   VALID_PHONE_REGEX = /\d[0-9]\)*\z/
 
-  has_many :books, dependent: :destroy,foreign_key: 'creator_id'
+  has_many :books, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :orders, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 255 },
@@ -46,20 +47,21 @@ class User < ApplicationRecord
   end
 
   private
-    def valid_age
-      return if valid_date_range.include?(birthday)
-      errors.add(:birthday, message: :invalid_birthday)
-    end
 
-    def valid_date_range
-      maximum_date..minimum_date
-    end
+  def valid_age
+    return if valid_date_range.include?(birthday)
+    errors.add(:birthday, message: :invalid_birthday)
+  end
 
-    def minimum_date
-      Date.new(Date.today.year - 6)
-    end
+  def valid_date_range
+    maximum_date..minimum_date
+  end
 
-    def maximum_date
-      Date.new(Date.today.year - 120)
-    end
+  def minimum_date
+    Date.new(Date.today.year - 6)
+  end
+
+  def maximum_date
+    Date.new(Date.today.year - 120)
+  end
 end
