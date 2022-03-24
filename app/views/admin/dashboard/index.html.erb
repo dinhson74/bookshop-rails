@@ -1,1 +1,18 @@
-<h1><%= I18n.t('common.dashboard')%></h1>
+<h1>Sample</h1>
+<table class='table table-bordered border-primary'>
+  <thead>
+    <tr>
+      <th scope='col'><%= I18n.t('admin.managament.book.name') %></th>
+      <th scope='col'><%= I18n.t('admin.managament.book.description') %></th>
+      <th scope='col'><%= I18n.t('admin.managament.book.price') %></th>
+      <th scope='col'><%= I18n.t('admin.managament.book.publisher') %></th>
+      <th scope='col'><%= I18n.t('admin.managament.book.image') %></th>
+      <th scope='col'>category_id</th>
+      <th scope='col'>By user</th>
+      <th scope='col'>total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @books %>
+  </tbody>
+</table>

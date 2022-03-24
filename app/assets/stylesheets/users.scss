@@ -22,9 +22,10 @@ textarea {
 .center {
   text-align: center;
   h1 {
-    margin-bottom: 10px;
+      margin-bottom: 10px;
   }
 }
+
 
 /* typography */
 
@@ -58,6 +59,7 @@ p {
   line-height: 1.7em;
 }
 
+
 /* header */
 
 #logo {
@@ -89,7 +91,9 @@ p {
   line-height: 1.7em;
 }
 
+
 /* header */
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -106,7 +110,9 @@ p {
   text-decoration: none;
 }
 
+
 /* footer */
+
 footer {
   margin-top: 45px;
   margin-top: 200px;
@@ -117,20 +123,20 @@ footer {
   a {
     color: #555;
     &:hover {
-      color: #222;
+        color: #222;
     }
   }
-  small {
+small {
     float: left;
     margin-left: 50px;
   }
   ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
+      float: right;
+      list-style: none;
+      li {
+          float: left;
+          margin-left: 15px;
+      }
   }
 }
 
@@ -140,6 +146,7 @@ footer {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .debug_dump {
   clear: both;
   float: left;
@@ -148,30 +155,32 @@ footer {
   @include box_sizing;
 }
 
+
 /* sidebar */
+
 aside {
   section.user_info {
-    margin-top: 20px;
+      margin-top: 20px;
   }
   section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
+      padding: 10px 0;
+      margin-top: 20px;
+      &:first-child {
+          border: 0;
+          padding-top: 0;
+      }
+      span {
+          display: block;
+          margin-bottom: 3px;
+          line-height: 1;
+      }
+      h1 {
+          font-size: 1.4em;
+          text-align: left;
+          letter-spacing: -1px;
+          margin-bottom: 3px;
+          margin-top: 0px;
+      }
   }
 }
 
@@ -184,7 +193,9 @@ aside {
   margin-top: 15px;
 }
 
+
 /* forms */
+
 input,
 textarea,
 select,
@@ -198,18 +209,19 @@ select,
 input {
   height: auto !important;
 }
+
 #error_explanation {
   color: red;
   ul {
-    color: red;
-    margin: 0 0 30px 0;
+      color: red;
+      margin: 0 0 30px 0;
   }
 }
 
 .field_with_errors {
   @extend .has-error;
   .form-control {
-    color: $state-danger-text;
+      color: $state-danger-text;
   }
 }
 
@@ -218,32 +230,35 @@ input {
   width: 80%;
   margin-left: 10%;
   .image-book {
-    width: 40%;
-    float: left;
-    margin-right: 50px;
-    img {
       width: 40%;
-      height: auto;
-    }
+      float: left;
+      margin-right: 50px;
+      img {
+          width: 40%;
+          height: auto;
+      }
   }
   .details-book {
-    width: 50%;
-    float: left;
-    height: 300px;
+      width: 50%;
+      float: left;
+      height: 300px;
   }
 }
+
 .sort-book {
   float: right;
   margin-bottom: 5%;
   margin-top: 20px;
   a {
-    margin-right: 5px;
+      margin-right: 5px;
   }
 }
+
 .sort-book {
   float: right;
   margin-bottom: 5%;
 }
+
 .comment {
   width: 100%;
   clear: both;
@@ -257,12 +272,15 @@ input {
 .table {
   width: 80%;
 }
+
 .actions {
   float: right;
   margin-right: 5%;
 }
+
 .table {
   img {
-    width: 100px;
+      width: 100px;
   }
 }
+
