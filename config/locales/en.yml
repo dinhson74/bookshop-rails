@@ -94,9 +94,9 @@ en:
       search: "Search"
       comments: "Comments"
       add_comment: "Add comment"
-      create_comment: "Create comment"
+      create_comment: "Send"
       comment:
-        destroy_comment: "Destroy comment"
+        destroy_comment: "Destroy"
   activerecord:
     errors:
       models:

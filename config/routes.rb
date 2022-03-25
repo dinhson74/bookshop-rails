@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :users, only: [:show]
     resources :books do
       resources :comments
+      resources :orders
     end
     namespace :admin do
       resources :users do

@@ -1,8 +1,7 @@
-<div class='comment'>
-  <h2> <%= I18n.t('shop.book.add_comment')%> </h2></h2>
+<div class='comment mt-1'>
   <%= form_with model: [ @book, @book.comments.build ] do |form| %>
     <p>
-      <%= form.label :content %><br>
+      <small><%= form.label :content %></small><br>
       <%= form.text_field :content %>
     </p>
     <p>

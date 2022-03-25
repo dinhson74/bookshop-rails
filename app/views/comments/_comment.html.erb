@@ -1,15 +1,17 @@
-<div class='comment'>
-  <strong>
+<div class='comment mt-1'>
+  <div class='text-info'>
     <%= comment.user&.name %>
-  </strong>
-
-  <p>
-    <%= comment.content %>
-  </p>
-
-  <p>
-    <%= link_to I18n.t('shop.book.comment.destroy_comment'), [comment.book, comment],
-                method: :delete,
-                data: { confirm: I18n.t('common.are_you_sure')} %>
-  </p>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-7">
+        <%= comment.content %>
+      </div>
+      <div class="col-md-4">
+          <%= link_to I18n.t('shop.book.comment.destroy_comment'), [comment.book, comment],
+                                                                  method: :delete,
+                                                                  data: { confirm: I18n.t('common.are_you_sure')}, class: 'text-danger'%>
+      </div>
+    </div>
+  </div>
 </div>

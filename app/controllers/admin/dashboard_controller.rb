@@ -7,7 +7,6 @@ module Admin
     private
 
     def load_book
-      binding.pry
       @books = Book.by_user(current_user.id)
     end
   end

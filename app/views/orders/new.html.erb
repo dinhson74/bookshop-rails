@@ -1,0 +1,66 @@
+<div class='row'>
+  <div class='col-md-12'>
+		<div class="col-md-6">
+    	<div class='image-book'>
+				<div class='row'>
+					<div class="col-md-6">
+    	  		<%= image_tag @book.image_url.to_s, class: 'img-show-order' %>
+					</div>
+					<div class="col-md-6">
+						<h2><%= @book.name %></h2>
+				 		<div class="form-group">
+							<label>Giá : </label>
+							<%= label_tag @book.price, @book.price.to_s, value: @book.price, id: 'price_book' %>
+						</div>
+				 		<div class="form-group">
+							<label>
+								<%= link_to @book.comments.count, @book %> Bình luận
+							</label>
+						</div>
+					</div>
+				</div>
+    	</div>
+		</div>
+		<div class="col-md-6">
+			<h2>Thông tin đặt hàng</h2>
+			<div class="row">
+	    	<%= render 'devise/shared/error_messages_order' %>
+			</div>
+    	<%= form_with(model: [@book, @book.orders.build ], local: true) do |f| %>
+				<div class="form-group">
+					<label>Số điện thoại </label></br>
+					<%= f.text_field :telephone, value: current_user.phone, class: 'ml-1' %>
+				</div>
+				<div class="form-group">
+					<label>Địa chỉ </label></br>
+					<%= f.text_field :address, value: current_user.address, class: 'ml-1' %>
+				</div>
+				<div class="form-group">
+					<label>Mã khuyến mãi </label></br>
+					<%= f.text_field :discount, class: 'ml-1' %>
+				</div>
+				<div class="form-group">
+					<label>Số lượng</label></br>
+					<%= f.number_field :amount, value: 1 %>
+				</div>
+				<div class="form-group">
+					<label>Tổng tiền </label></br>
+					<%= f.text_field :total_money, value: @book.price, disabled: true  %>
+				</div>
+				<%= f.submit I18n.t('common.create'), class: 'btn btn-primary' %>
+    	<% end %>
+	  </div>
+  </div>
+</div>
+<script type="text/javascript">
+ $(document).ready(function() {
+		$(document).on('change', '#order_amount', function() {
+			let priceBook = <%= @book.price %>
+			$('#order_total_money').val($('#order_amount').val() * priceBook);
+			if($('#order_total_money').val() < 0){
+				$('#order_total_money').val(0);
+				$('#order_amount').val(0);
+			}
+		});
+	});
+</script>
