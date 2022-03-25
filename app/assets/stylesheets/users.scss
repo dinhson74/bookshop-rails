@@ -284,3 +284,32 @@ input {
   }
 }
 
+.input-search {
+  height: 34px !important;
+}
+
+.mr-1 {
+  margin-left: 10%;
+}
+
+.mt-1 {
+  margin-top: 5%;
+}
+
+.text-info {
+  font-weight: bold;
+  color: rgba($color: #000c79, $alpha: 1.0);
+}
+
+.img-show {
+  width: 70%;
+  float: left;
+  margin-right: 50px;
+}
+
+.img-show-order {
+  width: 100%;
+  height: 100%;
+  float: left;
+  margin-right: 50px;
+}

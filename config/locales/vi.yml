@@ -94,9 +94,9 @@ vi:
       name: "Tên"
       comments: "Bình luận"
       add_comment: "Thêm bình luận"
-      create_comment: "Tạo bình luận"
+      create_comment: "Gửi"
       comment:
-        destroy_comment: "Xóa bình luận"
+        destroy_comment: "Xóa"
   activerecord:
     errors:
       models:
