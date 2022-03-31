@@ -10,7 +10,7 @@
       <div class="col-md-4">
           <%= link_to I18n.t('shop.book.comment.destroy_comment'), [comment.book, comment],
                                                                   method: :delete,
-                                                                  data: { confirm: I18n.t('common.are_you_sure')}, class: 'text-danger'%>
+                                                                  data: { confirm: I18n.t('common.are_you_sure')}, class: 'text-danger' if comment.user_id == current_user.id %>
       </div>
     </div>
   </div>
