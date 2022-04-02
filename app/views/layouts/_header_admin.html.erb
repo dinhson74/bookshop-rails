@@ -1,12 +1,14 @@
 <header class='navbar navbar-fixed-top navbar-inverse'>
   <div class='container'>
-    <%= link_to I18n.t('common.dashboard'), admin_root_path,id: 'logo'%>
-    <nav>
-     <ul class='nav navbar-nav navbar-right'>
+    <div class='col-md-6'>
+      <%= link_to I18n.t('common.dashboard'), admin_root_path,id: 'logo'%>
+    </div>
+    <div class='col-md-6'>
+      <ul class='nav navbar-nav navbar-left'>
         <li><%= link_to I18n.t('common.home'), admin_root_path %></li>
         <li><%= link_to I18n.t('common.language.english'), locale:'en' %></li>
         <li><%= link_to I18n.t('common.language.vietnamese'), locale:'vi' %></li>
-       <% if user_signed_in? %>
+      <% if user_signed_in? %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= I18n.t('user.account') %> <b class="caret"></b>
@@ -23,7 +25,7 @@
         <% else %>
           <li><%= link_to I18n.t('user.log_in'), new_user_session_path %></li>
         <% end %>
-     </ul>
-    </nav>
+      </ul>
+    </div>
   </div>
 </header>

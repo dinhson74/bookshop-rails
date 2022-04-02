@@ -13,7 +13,6 @@ module Admin
       end
     end
 
-
     def show
     end
 

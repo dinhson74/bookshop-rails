@@ -10,7 +10,7 @@
 
       <%= f.label :description %>
       <%= f.text_field :description, class: 'form-control' %>
-      
+
       <%= f.label :price %>
       <%= f.text_field :price, class: 'form-control' %>
 
@@ -23,8 +23,8 @@
       <%= f.label :category_id %>
       <%= f.select :category_id, options_for_select(load_categories), prompt: "" %>
 
-      <%= f.label :creator_id %>
-      <%= f.text_field :creator_id, class: 'form-control', value: current_user.try(:id),:readonly => true %>
+      <%= f.label :user_id %>
+      <%= f.text_field :user_id, class: 'form-control', value: current_user.try(:id),:readonly => true %>
 
       <%= f.submit I18n.t('common.create'), class: 'btn btn-primary' %>
     <% end %>

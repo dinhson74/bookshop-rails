@@ -23,7 +23,7 @@ module Admin
     def new
       @book = Book.new
     end
-    
+
     def create
       @book = Book.new(book_params)
       if @book.save
@@ -53,10 +53,10 @@ module Admin
     end
 
     private
-    
+
     def book_params
-      params.require(:book).permit(:name, :description, :price, :publisher, :image, :category_id, :creator_id)
-    end 
+      params.require(:book).permit(:name, :description, :price, :publisher, :image, :category_id, :user_id)
+    end
 
     def load_book
       @book = Book.find_by(id: params[:id])
@@ -74,8 +74,8 @@ module Admin
       month_number = number
       month_beginning = Date.new(Date.today.year, month_number)
       count_month = books.select{ |book| book.created_at.month == month_beginning.month}.count
-      
+
       return count_month
     end
   end
-end  
+end
